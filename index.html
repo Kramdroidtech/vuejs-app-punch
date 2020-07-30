@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Punch Game</title>
+    <link rel="stylesheet" href="index.css">
+       <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+  </head>
+  <body>
+    
+    <div id="container">
+      
+      <h1>Punch Now!</h1>
+      
+      <div id="bag" v-on:click="punch" v-bind:class="{burst:ended}"></div>
+      
+      <div id="bagHealth">
+        <div v-bind:style="{width:health + '%'}"></div>
+      </div>
+      
+      <div class="controls">
+        <button v-on:click="restart">Restart</button>
+        
+        <audio loop id="win" src="./soundeffects/win.mp3"></audio>
+        
+        <audio id="punched" src="./soundeffects/PUNCH.mp3"></audio>
+      </div>
+      
+    </div>
+    
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+#container{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#bag{
+  width: 80%;
+  height: 100%;
+  background: url('img/bag.png') center no-repeat;
+  transform: scale(1);
+}
+#bag:active{
+  transform: scale(0.98);
+}
+#bag.burst{
+  background:url('img/bag-burst.png') center no-repeat;
+}
+#bagHealth{
+  width: 200px;
+  border:solid 1px black;
+  margin-bottom: 20px;
+}
+#bagHealth div{
+  height: 20px;
+  background: red;
+}
