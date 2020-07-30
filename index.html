@@ -13,14 +13,14 @@
       
       <h1>Punch Now!</h1>
       
-      <div id="bag" v-on:click="punch" v-bind:class="{burst:ended}"></div>
+      <div id="bag" @click="punch" v-bind:class="{burst:ended}"></div>
       
       <div id="bagHealth">
         <div v-bind:style="{width:health + '%'}"></div>
       </div>
       
       <div class="controls">
-        <button v-on:click="restart">Restart</button>
+        <button @click="restart">Restart</button>
         
         <audio loop id="win" src="./soundeffects/win.mp3"></audio>
         
